@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Design Portfolio</title>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        background: #f5f5f5;
+        color: #222;
+        line-height: 1.6;
+    }
+
+    header {
+        text-align: center;
+        padding: 80px 20px;
+        background: white;
+    }
+
+    header h1 {
+        font-size: 3rem;
+        margin-bottom: 10px;
+    }
+
+    header p {
+        color: #666;
+        max-width: 600px;
+        margin: auto;
+    }
+
+    .portfolio {
+        max-width: 1200px;
+        margin: 50px auto;
+        padding: 0 20px;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 25px;
+    }
+
+    .project {
+        background: white;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        transition: transform 0.3s;
+    }
+
+    .project:hover {
+        transform: translateY(-5px);
+    }
+
+    .project img {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+        display: block;
+    }
+
+    .project-info {
+        padding: 20px;
+    }
+
+    .project-info h3 {
+        margin-bottom: 8px;
+    }
+
+    .project-info p {
+        color: #666;
+        font-size: 0.95rem;
+    }
+
+    footer {
+        text-align: center;
+        padding: 40px 20px;
+        color: #777;
+    }
+</style>
+</head>
+<body>
+
+<header>
+    <h1>Gronk Design</h1>
+    <p>
+        Creating thoughtful visual experiences, branding,
+        print and digital products, and creative solutions.
+    </p>
+</header>
+
+<section class="portfolio">
+    <div class="grid">
+
+        <div class="project">
+            <img src="images/project1.jpg" alt="Project 1">
+            <div class="project-info">
+                <h3>Good NEWs</h3>
+                <p>Identity and visual design.</p>
+            </div>
+        </div>
+
+        <div class="project">
+            <img src="images/project2.jpg" alt="Project 2">
+            <div class="project-info">
+                <h3>Newspaper</h3>
+                <p>Exhibition item design and binding.</p>
+            </div>
+        </div>
+
+        <div class="project">
+            <img src="images/project3.jpg" alt="Project 3">
+            <div class="project-info">
+                <h3>Project Three</h3>
+                <p>Packaging and product presentation.</p>
+            </div>
+        </div>
+
+        <div class="project">
+            <img src="images/project4.jpg" alt="Project 4">
+            <div class="project-info">
+                <h3>Project Four</h3>
+                <p>Website redesign and visual system.</p>
+            </div>
+        </div>
+
+        <div class="project">
+            <img src="images/project5.jpg" alt="Project 5">
+            <div class="project-info">
+                <h3>Project Five</h3>
+                <p>Editorial and publication design.</p>
+            </div>
+        </div>
+
+        <div class="project">
+            <img src="images/project6.jpg" alt="Project 6">
+            <div class="project-info">
+                <h3>Project Six</h3>
+                <p>Creative concept and digital campaign.</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<footer>
+    © 2026 Your Name • Portfolio
+</footer>
+
+</body>
+</html>
