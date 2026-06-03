@@ -11,6 +11,12 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,500&family=Strichpunkt+Sans:wdth,wght@200,600&display=swap" rel="stylesheet">
 
+<script>
+function toggleTheme() {
+    document.body.classList.toggle("dark");
+}
+</script>
+   
 <style>
     * {
         margin: 0;
@@ -57,6 +63,42 @@
         align-items: flex-start;
     }
 }
+
+   .theme-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 10px 14px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background: #222;
+    color: white;
+    font-size: 0.9rem;
+   }
+   
+   body.dark {
+       background: #121212;
+       color: #eaeaea;
+   }
+   
+   body.dark header {
+       background: #1e1e1e;
+   }
+   
+   body.dark .project {
+       background: #1e1e1e;
+       box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+   }
+   
+   body.dark footer {
+       color: #aaa;
+   }
+
+   .theme-toggle:hover {
+    transform: scale(1.1);
+   }
+   
     .portfolio {
         max-width: 1200px;
         margin: 50px auto;
@@ -120,6 +162,7 @@
    <p>  
         Print and digital design, branding, visual experience.
    </p>
+   <button class="theme-toggle" onclick="toggleTheme()"></button>
 </header>
 
 <section class="portfolio">
