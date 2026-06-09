@@ -11,11 +11,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,500&family=Strichpunkt+Sans:wdth,wght@200,600&display=swap" rel="stylesheet">
 
-<script>
-function toggleTheme() {
-    document.body.classList.toggle("dark");
-}
-</script>
+    
    
 <style>
     * {
@@ -255,5 +251,23 @@ function toggleTheme() {
     © 2026 Gronk Design • Portfolio
 </footer>
 
+<script>
+    // Apply saved theme immediately when page loads
+    if (localStorage.getItem("theme") === "dark") {
+        document.body.classList.add("dark");
+    }
+
+    function toggleTheme() {
+        document.body.classList.toggle("dark");
+
+        // Save the current state
+        if (document.body.classList.contains("dark")) {
+            localStorage.setItem("theme", "dark");
+        } else {
+            localStorage.setItem("theme", "light");
+        }
+    }
+</script>
+    
 </body>
 </html>
