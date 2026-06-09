@@ -43,6 +43,12 @@ function toggleTheme() {
     gap: 20px;
 }
 
+    hero { display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    }
+    
     header h1 {
        font-size: 2rem;
        margin-bottom: 0;
@@ -68,9 +74,9 @@ function toggleTheme() {
    .theme-toggle {
     top: 20px;
     right: 20px;
-    padding: 10px 14px;
+    padding: 10px 10px;
     border: none;
-    border-radius: 8px;
+    border-radius: 10px;
     cursor: pointer;
     background: #222;
     color: white;
@@ -111,19 +117,32 @@ function toggleTheme() {
         margin: 50px auto;
         padding: 0 20px;
     }
-
+    
     .grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        columns: 3;
         gap: 25px;
     }
+    
+@media (max-width: 768px) {
+    .grid {
+        columns: 2;
+    }
+}
 
+@media (max-width: 480px) {
+    .grid {
+        columns: 1;
+    }
+}
+    
     .project {
         background: white;
         border-radius: 12px;
         overflow: hidden;
         box-shadow: 0 5px 15px rgba(0,0,0,0.08);
         transition: transform 0.3s;
+        break-inside: avoid;
+        margin-bottom: 25px;
     }
 
     .project:hover {
@@ -132,7 +151,7 @@ function toggleTheme() {
 
     .project img {
         width: 100%;
-        height: 250px;
+        height: auto;
         object-fit: cover;
         display: block;
     }
@@ -166,17 +185,16 @@ function toggleTheme() {
 
 <header>
    <h1>Gronk Design</h1>
-   <p>  
-        Print and digital design, branding, visual experience.
-   </p>
    <button class="theme-toggle" onclick="toggleTheme()"></button>
 </header>
-
+<hero>  
+    Print and digital design, branding, visual experience.
+</hero>
 <section class="portfolio">
     <div class="grid">
 
         <div class="project">
-            <img src="https://github.com/gronk-io/gronk-io.github.io/blob/main/portfolio/Project1.jpg" alt="Poster: Good NEWs Project">
+            <img src="Project1.jpg" alt="Poster: Good NEWs Project">
             <div class="project-info">
                 <h3>Good NEWs</h3>
                 <p>Identity and visual design.</p>
@@ -184,7 +202,7 @@ function toggleTheme() {
         </div>
 
         <div class="project">
-            <img src="https://github.com/gronk-io/gronk-io.github.io/blob/main/portfolio/Project2.jpg" alt="Newspaper layout">
+            <img src="Project2.jpg" alt="Newspaper layout">
             <div class="project-info">
                 <h3>Newspaper</h3>
                 <p>Exhibition item design and binding.</p>
@@ -192,7 +210,7 @@ function toggleTheme() {
         </div>
 
         <div class="project">
-            <img src="/project3.jpg" alt="Project 3">
+            <img src="Chaotic Gradients - 10.jpg" alt="Project 3">
             <div class="project-info">
                 <h3>Project Three</h3>
                 <p>Packaging and product presentation.</p>
@@ -200,7 +218,7 @@ function toggleTheme() {
         </div>
 
         <div class="project">
-            <img src="/project4.jpg" alt="Project 4">
+            <img src="IMG_2469.JPEG" alt="Project 4">
             <div class="project-info">
                 <h3>Project Four</h3>
                 <p>Website redesign and visual system.</p>
@@ -208,7 +226,7 @@ function toggleTheme() {
         </div>
 
         <div class="project">
-            <img src="/project5.jpg" alt="Project 5">
+            <img src="bruecke.jpg" alt="Project 5">
             <div class="project-info">
                 <h3>Project Five</h3>
                 <p>Editorial and publication design.</p>
@@ -216,7 +234,7 @@ function toggleTheme() {
         </div>
 
         <div class="project">
-            <img src="/project6.jpg" alt="Project 6">
+            <img src="slother.jpg" alt="Project 6">
             <div class="project-info">
                 <h3>Project Six</h3>
                 <p>Creative concept and digital campaign.</p>
