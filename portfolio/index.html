@@ -43,10 +43,17 @@ function toggleTheme() {
     gap: 20px;
 }
 
-    hero { display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
+    .hold-still {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+    }
+    
+    hero { 
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
     }
     
     header h1 {
@@ -183,7 +190,7 @@ function toggleTheme() {
 </head>
 <body>
 
-<header>
+<header class="hold-still">
    <h1>Gronk Design</h1>
    <button class="theme-toggle" onclick="toggleTheme()"></button>
 </header>
